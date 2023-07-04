@@ -1,2 +1,12 @@
-$padding-x: 2rem
-$padding-y: 1.5rem
+$padding-x: 2em
+$padding-y: 1.5em
+
+$gray: #bbb
+
+@mixin media-desktop()
+    @media screen and ( min-aspect-ratio: 4 / 3 ) and ( min-width: 1280px )
+        @content
+
+@mixin media-small-screens()
+    @media screen and ((( max-aspect-ratio: 3 / 4 ) and ( max-width: 400px )) or (( min-aspect-ratio: 16 / 10 ) and ( max-height: 500px )))
+        @content

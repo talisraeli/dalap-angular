@@ -1,26 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+import { DataModule } from './data/data.module';
+
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MenuIconButtonComponent } from './shared/layout/header/menu-icon-button/menu-icon-button.component';
+import { IconButtonComponent } from './shared/components/icon-button/icon-button.component';
+import { OpinionCarouselComponent } from './opinion-carousel/opinion-carousel.component';
+import { OpinionCardComponent } from './opinion-carousel/opinion-card/opinion-card.component';
+import { OpinionOptionsComponent } from './opinion-carousel/opinion-card/opinion-options/opinion-options.component';
+import { OpinionShareComponent } from './opinion-carousel/opinion-card/opinion-share/opinion-share.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     HeaderComponent,
-    MenuIconButtonComponent
+    IconButtonComponent,
+    OpinionCarouselComponent,
+    OpinionCardComponent,
+    OpinionOptionsComponent,
+    OpinionShareComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    HttpClientModule,
+    DataModule,
+    FontAwesomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

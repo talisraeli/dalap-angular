@@ -1,0 +1,47 @@
+@import "variables"
+
+.opinion-card
+    display: grid
+    grid-template-rows: 1fr auto
+    height: 100%
+    padding-top: 2rem
+    box-sizing: border-box
+
+    --brightest-color: hsl(var(--color-hue), 80%, 24%)
+    --middle-color: hsl(var(--color-hue), 80%, 16%)
+    --darkest-color: hsl(var(--color-hue), 80%, 8%)
+    --transition-time: 2s
+
+    background: linear-gradient(var(--brightest-color), var(--darkest-color) calc( 100% - 16rem ))
+
+    @include media-desktop
+        background: linear-gradient(var(--brightest-color), var(--darkest-color) calc( 100% - 10rem ))
+
+    &.results .content-area .content
+        font-size: 1.5rem
+
+    .content-area
+        display: grid
+        grid-template-rows: 1fr auto
+        padding: 0 $padding-x $padding-y $padding-x
+
+        @media screen and ( min-aspect-ratio: 1 )
+            padding: 0 ($padding-x * 2) $padding-y ($padding-x * 2)
+
+        @media screen and ( min-aspect-ratio: 4 / 3 )
+            padding: 0 ($padding-x * 4) $padding-y ($padding-x * 4)
+
+        @media screen and ( min-aspect-ratio: 16 / 10 )
+            padding: 0 ($padding-x * 6) $padding-y ($padding-x * 6)
+
+        .content
+            font-size: 2rem
+            display: grid
+            align-content: center
+
+        .label
+            font-weight: 300
+            color: $gray
+
+            .share-opinion
+                display: none

@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap')
 @import "./variables"
 
 html
     font-family: Rubik, Arial, Helvetica, sans-serif
     font-size: 20px
+
+    @include media-desktop
+        font-size: 30px
+
+    @include media-small-screens
+        font-size: 15px
 
 *
     margin: 0
@@ -12,16 +18,23 @@ html
 body
     background: black
     color: white
+    height: 100dvh
+    text-align: center
 
 h1
     font-size: 1rem
-    font-weight: 900
+    font-weight: 700
+
+p
+    line-height: 1.5
 
 button
     cursor: pointer
     color: inherit
     font-size: inherit
     border: 0
+    font: inherit
+    font-weight: 500
 
     &.transparent
         background: transparent

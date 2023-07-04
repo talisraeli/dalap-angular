@@ -1,0 +1,59 @@
+@import "variables"
+
+.options
+    display: flex
+    flex-direction: column
+    height: 16rem
+    transition: height var(--transition-time)
+
+    @media screen and ( min-aspect-ratio: 1 )
+        flex-direction: row
+        height: 10rem
+
+    &.results
+        height: 24rem
+
+        @include media-desktop
+            height: 16rem
+
+        button
+            cursor: default
+
+    .option
+        transition: flex var(--transition-time)
+
+        > button
+            position: relative
+            display: block
+            width: 100%
+            height: 100%
+            margin: 0
+
+            white-space: nowrap
+
+            .content
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                padding: $padding-y
+
+                display: grid
+                align-content: center
+
+                *
+                    line-height: 1
+
+                .percentage
+                    font-weight: 400
+
+                .text
+                    font-size: 2rem
+
+        &.agree
+            background: var(--middle-color)
+            z-index: 1
+
+        &.disagree
+            background: var(--brightest-color)

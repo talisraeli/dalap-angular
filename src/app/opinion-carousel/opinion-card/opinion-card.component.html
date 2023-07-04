@@ -1,0 +1,19 @@
+<div
+  class="opinion-card"
+  [class.results]="results"
+  [style]="{ '--color-hue': opinion.colorHue }"
+>
+  <div class="content-area">
+    <p class="content">{{ opinion.content }}</p>
+    <div class="label">
+      <p *ngIf="!results" class="choose-option">
+        בחר תשובה וגלה האם זו דעה פופולרית
+      </p>
+      <app-opinion-share *ngIf="results"></app-opinion-share>
+    </div>
+  </div>
+  <app-opinion-options
+    [results]="results"
+    (onOptionClick)="onOptionClick($event)"
+  ></app-opinion-options>
+</div>
