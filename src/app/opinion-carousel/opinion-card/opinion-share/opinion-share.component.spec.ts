@@ -8,7 +8,7 @@ describe('OpinionShareComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OpinionShareComponent]
+      declarations: [OpinionShareComponent],
     });
     fixture = TestBed.createComponent(OpinionShareComponent);
     component = fixture.componentInstance;
