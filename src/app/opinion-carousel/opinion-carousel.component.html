@@ -1,4 +1,5 @@
-<app-opinion-card
-  *ngFor="let opinion of opinions"
-  [opinion]="opinion"
-></app-opinion-card>
+<swiper-container #swiper>
+  <swiper-slide *ngFor="let opinion of opinions">
+    <app-opinion-card [opinion]="opinion"></app-opinion-card>
+  </swiper-slide>
+</swiper-container>
