@@ -1,8 +1,12 @@
-import { OpinionResults } from './OpinionResults';
-
 export interface Opinion {
   id: string;
+  createdAt: Date;
   content: string;
   colorHue: number;
-  results?: OpinionResults;
+  votes?: OpinionVotes;
+}
+
+export interface OpinionVotes {
+  agree: number;
+  disagree: number;
 }

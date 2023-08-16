@@ -13,6 +13,7 @@ import { OpinionCarouselComponent } from './opinion-carousel/opinion-carousel.co
 import { OpinionCardComponent } from './opinion-carousel/opinion-card/opinion-card.component';
 import { OpinionOptionsComponent } from './opinion-carousel/opinion-card/opinion-options/opinion-options.component';
 import { OpinionShareComponent } from './opinion-carousel/opinion-card/opinion-share/opinion-share.component';
+import { SwiperCardDirective } from './opinion-carousel/swiper/swiper-card.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { OpinionShareComponent } from './opinion-carousel/opinion-card/opinion-s
     OpinionCardComponent,
     OpinionOptionsComponent,
     OpinionShareComponent,
+    SwiperCardDirective,
   ],
   imports: [
     BrowserModule,

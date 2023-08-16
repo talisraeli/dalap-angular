@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Opinion } from 'src/app/data/opinions/models/Opinion';
 import { OptionOptionType } from './opinion-options/OpinionOptionType';
-import { OpinionResults } from 'src/app/data/opinions/models/OpinionResults';
+import { OpinionService } from 'src/app/data/opinions/services/opinion.service';
 
 @Component({
   selector: 'app-opinion-card',
@@ -11,13 +11,9 @@ import { OpinionResults } from 'src/app/data/opinions/models/OpinionResults';
 export class OpinionCardComponent {
   @Input() opinion!: Opinion;
 
-  results?: OpinionResults;
+  constructor(private opinionService: OpinionService) {}
 
   onOptionClick(type: OptionOptionType) {
-    // @TODO: Get a real results
-    this.results = {
-      agree: 66,
-      disagree: 34,
-    };
+    this.opinionService.voteOpinion(this.opinion, type === 'agree');
   }
 }

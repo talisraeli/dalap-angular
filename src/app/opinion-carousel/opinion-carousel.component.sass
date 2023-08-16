@@ -1,2 +1,18 @@
 :host, swiper-container
     z-index: 0
+
+swiper-container
+    position: relative
+    display: block
+    height: 100%
+    width: 100%
+    overflow: hidden
+
+    app-opinion-card
+        position: absolute
+        inset: 0
+        user-select: none
+        transition: transform 0.5s
+
+        &:not(:first-of-type)
+            z-index: -1

@@ -1,17 +1,21 @@
-<div class="options" [class.results]="results">
-  <div class="option agree" [style]="{ flex: results?.agree ?? 50 }">
+<div class="options" [class.results]="votes">
+  <div class="option agree" [style]="{ flex: votes?.agree ?? 50 }">
     <button class="transparent" (click)="onButtonClick('agree')">
       <div class="content">
-        <p *ngIf="results" class="percentage">{{ results.agree }}%</p>
-        <p class="text">{{ results ? "מסכימים" : "אני מסכים!" }}</p>
+        <p *ngIf="percentages" class="percentage">{{ percentages.agree }}%</p>
+        <p class="text">{{ votes ? "מסכימים" : "אני מסכים!" }}</p>
       </div>
     </button>
   </div>
-  <div class="option disagree" [style]="{ flex: results?.disagree ?? 50 }">
+  <div class="option disagree" [style]="{ flex: votes?.disagree ?? 50 }">
     <button class="transparent" (click)="onButtonClick('disagree')">
       <div class="content">
-        <p *ngIf="results" class="percentage">{{ results.disagree }}%</p>
-        <p class="text">{{ results ? "לא מסכימים" : "אני לא מסכים!" }}</p>
+        <p *ngIf="percentages" class="percentage">
+          {{ percentages.disagree }}%
+        </p>
+        <p class="text">
+          {{ votes ? "לא מסכימים" : "אני לא מסכים!" }}
+        </p>
       </div>
     </button>
   </div>

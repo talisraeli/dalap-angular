@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OpinionService } from './data/opinions/services/opinion.service';
 
 @Component({
   selector: 'app-root',
