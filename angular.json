@@ -24,7 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles/styles.sass"],
+            "styles": [
+              "src/custom-theme.scss",
+              "src/styles/styles.sass"
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
@@ -97,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "eec32926-2b9a-4b7b-859c-5f1cf50e5dfe"
   }
 }

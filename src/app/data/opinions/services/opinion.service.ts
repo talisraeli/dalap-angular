@@ -11,7 +11,7 @@ export class OpinionService {
   private subject = new Subject<Opinion[]>();
   private didUserCreated = localStorage.getItem('didUserCreated') !== null;
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService) { }
 
   initOpinions() {
     this.authorizeUser(() => {
@@ -24,7 +24,7 @@ export class OpinionService {
     });
   }
 
-  getOpinion() {
+  getOpinion(): void {
     this.authorizeUser(() => {
       this.api.get<Opinion>('/opinions/get').subscribe((opinion) => {
         this.opinions.push(opinion);

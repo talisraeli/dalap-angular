@@ -14,6 +14,7 @@ import { OpinionCardComponent } from './opinion-carousel/opinion-card/opinion-ca
 import { OpinionOptionsComponent } from './opinion-carousel/opinion-card/opinion-options/opinion-options.component';
 import { OpinionShareComponent } from './opinion-carousel/opinion-card/opinion-share/opinion-share.component';
 import { SwiperCardDirective } from './opinion-carousel/swiper/swiper-card.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SwiperCardDirective } from './opinion-carousel/swiper/swiper-card.direc
     HttpClientModule,
     DataModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
