@@ -14,6 +14,7 @@ import { OpinionCardComponent } from './opinion-carousel/opinion-card/opinion-ca
 import { OpinionOptionsComponent } from './opinion-carousel/opinion-card/opinion-options/opinion-options.component';
 import { OpinionShareComponent } from './opinion-carousel/opinion-card/opinion-share/opinion-share.component';
 import { SwiperCardDirective } from './opinion-carousel/swiper/swiper-card.directive';
+import { SideMenuComponent } from './shared/layout/side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SwiperCardDirective } from './opinion-carousel/swiper/swiper-card.direc
     OpinionOptionsComponent,
     OpinionShareComponent,
     SwiperCardDirective,
+    SideMenuComponent,
   ],
   imports: [
     BrowserModule,

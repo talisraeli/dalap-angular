@@ -1,0 +1,68 @@
+@import "variables.sass"
+    
+:host
+    position: relative
+    display: block
+    height: 100%
+
+    > *
+        position: absolute
+        inset: 0
+        pointer-events: all
+
+    .backdrop
+        background: rgba(0, 0, 0, 0.80)
+        backdrop-filter: blur(2px)
+
+    nav
+        inset-inline-end: auto
+        background: $dark-gray
+        padding: $padding-y $padding-x
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        text-align: start
+        width: min(13rem, 50vw)
+
+        $gap: $padding-y / 2
+        gap: $gap
+
+        ul
+            list-style: none
+            display: flex
+            flex-direction: column
+            gap: $gap / 2
+
+            li a
+                color: $lighter-gray
+                text-decoration: none
+                display: block
+                transition: color 200ms
+
+                &:hover
+                    color: white
+
+        .sections
+            display: flex
+            flex-direction: column
+            gap: $gap
+
+            .icon
+                text-align: end
+                color: $lighter-gray
+                transition: color 200ms
+
+                &:hover
+                    color: white
+
+        .footer
+            font-size: 0.75rem
+
+            p
+                font-size: 0.5rem
+                font-weight: 500
+                padding-block-end: $padding-y / 4
+
+            ul
+                border-block-start: 1px solid white
+                padding-block-start: $padding-y / 2
