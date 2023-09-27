@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,5 +7,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./side-menu.component.sass'],
 })
 export class SideMenuComponent {
+  @Output() closeMenu = new EventEmitter();
+
   closeIcon = faXmark;
 }

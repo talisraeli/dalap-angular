@@ -1,8 +1,11 @@
-<div class="backdrop"></div>
+<div class="backdrop" (click)="closeMenu.emit()"></div>
 <nav>
   <div class="sections">
     <div class="icon">
-      <app-icon-button [icon]="closeIcon"></app-icon-button>
+      <app-icon-button
+        [icon]="closeIcon"
+        (click)="closeMenu.emit()"
+      ></app-icon-button>
     </div>
     <ul>
       <li><a href="#">הדעות שלי</a></li>

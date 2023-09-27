@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faBars, faFilter } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,6 +7,8 @@ import { faBars, faFilter } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.sass'],
 })
 export class HeaderComponent {
+  @Output() openMenu = new EventEmitter();
+
   menuIcon = faBars;
   filterIcon = faFilter;
 }

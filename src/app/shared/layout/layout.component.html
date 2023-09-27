@@ -1,7 +1,7 @@
 <div class="layer">
   <main><ng-content></ng-content></main>
-  <app-header></app-header>
+  <app-header (openMenu)="openMenu()"></app-header>
 </div>
-<div class="layer">
-  <app-side-menu></app-side-menu>
+<div class="layer" *ngIf="isMenuOpen">
+  <app-side-menu (closeMenu)="closeMenu()"></app-side-menu>
 </div>
