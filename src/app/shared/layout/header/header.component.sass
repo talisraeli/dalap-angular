@@ -1,14 +1,15 @@
 @import "variables"
 
-header
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
+:host
+    position: relative
+    display: block
 
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding: $padding-y $padding-x
+    header
+        position: absolute
+        inset-inline: 0
+        inset-block-start: 0
 
-    z-index: 1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: $padding-y $padding-x
